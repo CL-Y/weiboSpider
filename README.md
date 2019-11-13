@@ -85,3 +85,10 @@ m.weibo.com下的网址,如
   time.sleep(3)
 + weibo.py  
   start_urls
+
+使用方法：  
+
+1. 在自己的某个目录下，git clone git@github.com:yky518/weiboSpider.git  
+2. 修改上面列的几个文件  
+3. 修改完后在主目录下，用scripy命令
+   scripy crawl weibo
