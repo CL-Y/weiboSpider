@@ -17,8 +17,8 @@
 需要修改项：
 
 `USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'`  
-浏览器右键查看元素 -> 网络（刷新页面）-> 选择html文件 -> 请求头
-建议用chrome
+浏览器右键查看元素 -> 网络（刷新页面）-> 选择html文件 -> 请求头  
+注：建议用chrome
 <img src="figs/chrome-agent.png"  align=center>
 
 `IMAGES_STORE = 'weiboImg/whYUEspecial'`  
@@ -53,12 +53,13 @@ ITEM_PIPELINES = {
 
 <img src="figs/middlewares.png" align=center>
 加了selenium的webdriver模拟网页下拉，使用了chrome的无头浏览器
+
 ```py
 driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/usr/local/bin/chromedriver')
 ```
-executable_path=""
-修改成自己的chromedriver地址
-time.sleep(3)
+
+executable_path="", 修改成自己的chromedriver地址  
+time.sleep(3)  
 每次下拉之后会sleep 3秒，等浏览器加载网页，如果网速比较慢的话，可适当增大。
 
 ## spiders
@@ -67,7 +68,7 @@ time.sleep(3)
 weibo.py
 <img src='figs/spider.png' align=center>
 start_urls 开始的地址改成你要爬的地址，
-可以放多个地址的列表
+可以放多个地址的列表  
 注：微博用手机版即
 m.weibo.com下的网址,如
 <img src="figs/start_urls.png" align=center>
@@ -77,12 +78,10 @@ m.weibo.com下的网址,如
 
 要修改的：
 
-+ setting.py
++ setting.py  
   USER_AGENT
-+ middlewares.py
-  excutable_path
++ middlewares.py  
+  excutable_path  
   time.sleep(3)
-+ weibo.py
++ weibo.py  
   start_urls
-
-
